@@ -25,7 +25,7 @@ header {
   border-bottom: black 1px solid;
   background-color: #D3D9D4;
   z-index:1;
-}
+} 
 
 .logoContainer {
   display: flex;
@@ -44,6 +44,44 @@ nav {
   align-items: center;
   flex-grow: 1;
   gap: 16px;
+}
+
+nav p {
+  transition: 350ms;
+}
+
+nav p:hover {
+  font-size: 1.2rem;
+  font-weight: bolder;
+
+}
+
+/*Suppressing Mobile Nav*/
+@media only screen and (min-width: 678px) {
+  .mobileNav {
+    display: none;
+  }
+}
+
+/*Getting rid of nav content for mobile*/
+@media only screen and (max-width: 678px) {
+  header {
+    padding: 0px;
+    overflow: hidden;
+  }
+  
+  header .logoContainer{
+    display: none;
+  }
+  header nav {
+    display: none;
+  }
+
+  .mobileNav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 /*Offset for Header*/
@@ -76,10 +114,26 @@ main {
   justify-content: center;
   padding-left: 24px;
   gap: 0;
+  
 }
 
 .learnContainer h1, h3 {
   margin: 12px 0px;
+}
+
+/*For Mobile*/
+@media only screen and (max-width: 678px) {
+  .startContainer {
+    flex-direction:column;
+    padding: 0px;
+    
+  }
+
+  .startImage {
+    width: 100%;
+    min-width: 100%;
+  }
+  
 }
 
 .learnContainer .startButton {
@@ -90,6 +144,7 @@ main {
   margin: 12px 0px;
   border-radius: 5px;
   color: white;
+  transition: 350ms;
 }
 
 .startButton h3 {
@@ -100,6 +155,7 @@ main {
 .startButton:hover {
   color: white;
   background-color: #212A31;
+  width: 94%;
 }
 
 /*Second Content Box */
@@ -125,6 +181,7 @@ main {
 
 }
 
+
 /*Smaller Info Boxes*/
 .infoContainer {
   background-color: #748D92;
@@ -146,7 +203,12 @@ main {
 
 .infoContainer img {
   width: 35%;
+  transition: 400ms;
 
+}
+
+.infoContainer:hover img {
+  width: 38%;
 }
 
 .infoText {
@@ -170,6 +232,50 @@ main {
   margin: 0px;
 }
 
+/*Suppressing for desktop*/
+@media only screen and (min-width:678px) {
+  .mobilePic {
+    display: none;
+  }
+}
+
+/*Hiding, altering for Mobile*/
+@media only screen and (max-width: 678px) {
+  .mainInfoContainer {
+    display: none;
+  }
+
+.otherInfoContainer { 
+  width: 100%;
+}
+
+  .infoContainer {
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .desktopPic {
+    display: none;
+  }
+
+  .mobilePic {
+    min-width: 100%;
+    height: auto;
+  }
+
+  .hiringCallout {
+    display: none;
+  }
+
+  #topInfo {
+    padding-top: 16px;
+  }
+
+  .infoText {
+    padding: 24px 0px;
+  }
+}
 
 /*Third Section*/
 .boxHeading {
@@ -192,6 +298,12 @@ main {
 
 .coursesContainer img {
   max-width: 20vw;
+  transition: 350ms;
+  
+}
+
+.course:hover img {
+  max-width: 22vw;
   
 }
 
@@ -199,6 +311,40 @@ main {
   max-width: 20vw;
 }
 
+/*Suppressing mobile courses*/
+@media only screen and (min-width: 678px) {
+  .mobileCourse {
+    display: none;
+    text-align: left;
+  }
+}
+
+/*Suppressing desktop courses, mobile course formatting*/
+@media only screen and (max-width: 678px) {
+  .coursesContainer{
+    flex-direction: column;
+    padding: 0px 16px 32px 16px;
+  }
+
+  .course {
+    display: none;
+  }
+
+  .mobileCourse {
+    width: 100%;
+    background-color: #124E66;
+    border-radius: 8px;
+    padding: 16px 0px 24px 16px;
+    transition: 2s;
+    
+  }
+}
+
+  .mobileCourse:hover {
+    text-align: center;
+  }
+
+  
 
 /*Thesis Section*/
 .boxHeadingB {
@@ -244,4 +390,40 @@ main {
   margin-top: 32px;
   margin-left: 24px;
   
+}
+
+/*Hiding content for mobile*/
+@media only screen and (max-width: 678px) {
+   .exhibitContainer {
+    width: 100%;
+  }
+
+
+.thesisLeft {
+  min-width: 100%;
+  padding: 16px 0px 24px 0px;;
+  }
+
+  .thesisLeft h2, p {
+    display: none;
+  }
+
+.thesisLeft video {
+  
+}
+
+  .thesisRight {
+    display:none;
+  }
+}
+
+/*shrink headers*/
+@media only screen and (max-width: 750px) {
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
 }
