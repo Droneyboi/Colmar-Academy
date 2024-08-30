@@ -1,2 +1,5 @@
-Desktop v1.0
-Updates for Desktop v1.1: Link text decoration, transitions of pertinent items, clean up of CSS document.
+Original Desktop v1.0
+v2.0:
+  - Increased interactivity and responsiveness
+  - Fixed bug of overflow outside of html of text boxes
+  - 
